@@ -13,7 +13,7 @@ const TambahProduk = () => {
 
   const saveProduct = async (e) => {
     e.preventDefault();
-    await axios.post("http://localhost:5000/tambahproduk", {
+    await axios.post("https://test-mongodb-server.vercel.app/tambahproduk", {
         nama_barang,
         stok,
         jumlah_terjual,

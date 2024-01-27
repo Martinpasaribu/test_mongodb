@@ -11,7 +11,7 @@ const app = express();
 
 app.use(cors(
 {
-    origin: ["https://www.postman.com","http://localhost:3000","https://alan-resto-one.vercel.app","http://localhost:5000"],
+    origin: ["https://www.postman.com","http://localhost:3000","https://test-mongodb-client.vercel.app/","http://localhost:5000"],
     methods: ["POST", "GET", "PATCH", "DELETE","OPTIONS" ], // Perubahan disini ke 'methods'
     credentials: true,
 }));

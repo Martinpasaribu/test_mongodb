@@ -42,7 +42,7 @@ export const Dashboard = () => {
 
   const { mutate } = useSWRConfig();
   const fetcher = async () => {
-    const response = await axios.get("http://localhost:5000/getproduct");
+    const response = await axios.get("https://test-mongodb-server.vercel.app/getproduct");
     return response.data;
   };
 
@@ -51,7 +51,7 @@ export const Dashboard = () => {
 
   const deleteProduct = async (productId) => {
     try {
-      await axios.delete(`http://localhost:5000/hapusproduk/${productId}`);
+      await axios.delete(`https://test-mongodb-server.vercel.app/hapusproduk/${productId}`);
       mutate("products");
     } catch (error) {
       console.error("Error deleting product:", error.message);
