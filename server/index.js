@@ -3,6 +3,7 @@ import cors from "cors";
 import dotenv from "dotenv";
 import ProductRoute from "./routes/ProductRoute.js";
 // import Koneksi from "./config/Koneksi.js";
+import { Koneksi } from "./config/Koneksi.js";
 
 dotenv.config();
 
@@ -24,6 +25,7 @@ app.use(ProductRoute);
 
 app.use("/", (req, res) => {
     res.send("Server is running");
+    res.send(Koneksi)
 });
 
 app.listen(process.env.APP_PORT, () => {
